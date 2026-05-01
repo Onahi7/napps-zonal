@@ -1,160 +1,166 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { LogIn, Mail, Phone } from 'lucide-react';
-import { toast } from 'sonner';
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Layout } from "@/components/Layout";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Loader2, LogIn, Eye, EyeOff, AlertCircle } from "lucide-react";
+import { toast } from "sonner";
 
-export const ProprietorLogin = () => {
-  const [loginMethod, setLoginMethod] = useState<'email' | 'phone'>('email');
-  const [identifier, setIdentifier] = useState('');
-  const [loading, setLoading] = useState(false);
+export default function ProprietorLogin() {
   const navigate = useNavigate();
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://api.nappsnasarawa.com/api/v1';
+  const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    rememberMe: false
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (!identifier.trim()) {
-      toast.error(`Please enter your ${loginMethod === 'email' ? 'email address' : 'phone number'}`);
-      return;
-    }
-
-    setLoading(true);
+    setIsLoading(true);
+    setError("");
 
     try {
-      const queryParam = loginMethod === 'email' 
-        ? `email=${encodeURIComponent(identifier)}` 
-        : `phone=${encodeURIComponent(identifier)}`;
-
-      const response = await fetch(`${API_BASE_URL}/proprietors/lookup?${queryParam}`);
-
-      if (!response.ok) {
-        throw new Error('Login failed');
-      }
-
-      const data = await response.json();
-
-      if (data && data.length > 0) {
-        // Store proprietor data in session/local storage
-        const proprietorData = data[0];
-        localStorage.setItem('proprietor', JSON.stringify(proprietorData));
-        localStorage.setItem('proprietorId', proprietorData._id || proprietorData.submissionId);
-        
-        toast.success('Login successful!');
-        navigate('/dashboard');
+      // Simulate login - in real app would call Supabase
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      if (formData.email && formData.password) {
+        toast.success("Login successful!");
+        navigate("/proprietor-dashboard");
       } else {
-        toast.error('No record found. Please check your details or register first.');
+        setError("Invalid email or password");
       }
-    } catch (error) {
-      console.error('Login error:', error);
-      toast.error('Login failed. Please try again.');
+    } catch (err) {
+      setError("Login failed. Please try again.");
     } finally {
-      setLoading(false);
+      setIsLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-accent/5 flex items-center justify-center p-4">
-      <Card className="w-full max-w-md elegant-shadow">
-        <CardHeader className="text-center">
-          <div className="flex justify-center mb-4">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-              <LogIn className="w-8 h-8 text-primary" />
-            </div>
+    <Layout>
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center py-12 px-4">
+        <div className="w-full max-w-md">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <Link to="/" className="inline-flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-md">
+                <span className="text-white font-bold text-lg">NC</span>
+              </div>
+            </Link>
+            <h1 className="text-2xl font-bold text-slate-900">Welcome Back</h1>
+            <p className="text-slate-600 mt-2">Sign in to your NAPPS proprietor account</p>
           </div>
-          <CardTitle className="text-2xl">Proprietor Dashboard</CardTitle>
-          <CardDescription>
-            Login to access your registration details and payment status
-          </CardDescription>
-        </CardHeader>
 
-        <CardContent>
-          <Tabs value={loginMethod} onValueChange={(v) => setLoginMethod(v as 'email' | 'phone')}>
-            <TabsList className="grid w-full grid-cols-2 mb-6">
-              <TabsTrigger value="email" className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                Email
-              </TabsTrigger>
-              <TabsTrigger value="phone" className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                Phone
-              </TabsTrigger>
-            </TabsList>
+          <Card className="border-0 shadow-xl">
+            <CardHeader className="bg-gradient-to-r from-slate-800 to-slate-900 text-white pb-8">
+              <CardTitle className="text-center text-lg">Proprietor Login</CardTitle>
+            </CardHeader>
+            <CardContent className="p-6 md:p-8">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {error && (
+                  <div className="flex items-center gap-2 p-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm">
+                    <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                    {error}
+                  </div>
+                )}
 
-            <form onSubmit={handleLogin} className="space-y-4">
-              <TabsContent value="email" className="space-y-4 mt-0">
                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address</Label>
                   <Input
                     id="email"
                     type="email"
-                    placeholder="your.email@example.com"
-                    value={identifier}
-                    onChange={(e) => setIdentifier(e.target.value)}
-                    disabled={loading}
-                    autoComplete="email"
+                    placeholder="proprietor@school.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    required
+                    className="h-12"
                   />
-                  <p className="text-xs text-muted-foreground">
-                    Enter the email you used during registration
-                  </p>
                 </div>
-              </TabsContent>
 
-              <TabsContent value="phone" className="space-y-4 mt-0">
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    placeholder="+2348012345678"
-                    value={identifier}
-                    onChange={(e) => setIdentifier(e.target.value)}
-                    disabled={loading}
-                    autoComplete="tel"
-                  />
-                  <p className="text-xs text-muted-foreground">
-                    Enter your registered phone number with country code
-                  </p>
+                  <div className="flex items-center justify-between">
+                    <Label htmlFor="password">Password</Label>
+                    <Link to="/forgot-password" className="text-sm text-emerald-600 hover:underline">
+                      Forgot password?
+                    </Link>
+                  </div>
+                  <div className="relative">
+                    <Input
+                      id="password"
+                      type={showPassword ? "text" : "password"}
+                      placeholder="Enter your password"
+                      value={formData.password}
+                      onChange={(e) => setFormData({...formData, password: e.target.value})}
+                      required
+                      className="h-12 pr-12"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                    >
+                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                    </button>
+                  </div>
                 </div>
-              </TabsContent>
 
-              <Button 
-                type="submit" 
-                className="w-full" 
-                size="lg"
-                disabled={loading}
-              >
-                {loading ? (
-                  <>
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-                    Logging in...
-                  </>
-                ) : (
-                  <>
-                    <LogIn className="w-4 h-4 mr-2" />
-                    Access Dashboard
-                  </>
-                )}
-              </Button>
-            </form>
-          </Tabs>
+                <div className="flex items-center gap-2">
+                  <Checkbox 
+                    id="rememberMe"
+                    checked={formData.rememberMe}
+                    onChange={(e) => setFormData({...formData, rememberMe: e.target.checked})}
+                  />
+                  <Label htmlFor="rememberMe" className="text-sm text-slate-600 cursor-pointer">
+                    Remember me for 30 days
+                  </Label>
+                </div>
 
-          <div className="mt-6 text-center text-sm text-muted-foreground">
-            <p>Don't have an account?</p>
-            <Button 
-              variant="link" 
-              className="px-0"
-              onClick={() => navigate('/register')}
-            >
-              Register as a Proprietor
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
+                <Button 
+                  type="submit" 
+                  className="w-full h-12 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-base font-semibold"
+                  disabled={isLoading}
+                >
+                  {isLoading ? (
+                    <>
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      Signing in...
+                    </>
+                  ) : (
+                    <>
+                      <LogIn className="w-5 h-5 mr-2" />
+                      Sign In
+                    </>
+                  )}
+                </Button>
+              </form>
+
+              <div className="mt-6 text-center text-sm text-slate-600">
+                <p>
+                  Not registered yet?{" "}
+                  <Link to="/register" className="text-emerald-600 font-medium hover:underline">
+                    Register your school
+                  </Link>
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Help */}
+          <p className="mt-6 text-center text-sm text-slate-500">
+            Having trouble?{" "}
+            <a href="mailto:support@napps-northcentral.com" className="text-emerald-600 hover:underline">
+              Contact support
+            </a>
+          </p>
+        </div>
+      </div>
+    </Layout>
   );
-};
+}

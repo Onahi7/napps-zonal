@@ -1,3 +1,3 @@
-export { default as Step1PersonalInfo } from './Step1PersonalInfo';
-export { default as Step2SchoolInfo } from './Step2SchoolInfo';
-export { default as Step3PaymentInfo } from './Step3PaymentInfo';
+export { Step1PersonalInfo } from './Step1PersonalInfo';
+export { Step2SchoolInfo } from './Step2SchoolInfo';
+export { Step3PaymentInfo } from './Step3PaymentInfo';

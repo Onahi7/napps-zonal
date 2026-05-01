@@ -9,18 +9,19 @@ import Admin from "./pages/Admin";
 import PaymentStatus from "./pages/PaymentStatus";
 import NotFound from "./pages/NotFound";
 import ProprietorDetailPage from "./components/admin/pages/ProprietorDetailPage";
-import { ProprietorLogin } from "./pages/ProprietorLogin";
-import { ProprietorDashboard } from "./pages/ProprietorDashboard";
+import ProprietorLogin from "./pages/ProprietorLogin";
+import ProprietorDashboard from "./pages/ProprietorDashboard";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { SimulatedPayment } from "./pages/SimulatedPayment";
 import { PaymentSuccess } from "./pages/PaymentSuccess";
-import LevyPayment from "./pages/LevyPayment";
-import LevyPaymentVerify from "./pages/LevyPaymentVerify";
-import LevyPaymentDownload from "./pages/LevyPaymentDownload";
+import DuesPayment from "./pages/DuesPayment";
+import DuesPaymentVerify from "./pages/DuesPaymentVerify";
+import DuesPaymentDownload from "./pages/DuesPaymentDownload";
+import Executives from "./pages/Executives";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+  const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -44,9 +45,10 @@ const App = () => (
               </ProtectedRoute>
             } 
           />
-          <Route path="/levy-payment" element={<LevyPayment />} />
-          <Route path="/levy-payment/verify" element={<LevyPaymentVerify />} />
-          <Route path="/levy-payment/download" element={<LevyPaymentDownload />} />
+          <Route path="/dues-payment" element={<DuesPayment />} />
+          <Route path="/dues-payment/verify" element={<DuesPaymentVerify />} />
+          <Route path="/dues-payment/download" element={<DuesPaymentDownload />} />
+          <Route path="/executives" element={<Executives />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
