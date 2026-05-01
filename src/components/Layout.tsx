@@ -21,6 +21,7 @@ export const Layout = ({ children }: LayoutProps) => {
     { to: '/register', label: 'Register', icon: UserPlus },
     { to: '/dues-payment', label: 'Pay Dues', icon: CreditCard },
     { to: '/proprietor-login', label: 'Login', icon: LogIn },
+    { to: '/offline-backup', label: 'Offline Backup', icon: UserPlus },
   ];
 
   return (
@@ -193,7 +194,7 @@ export const Layout = ({ children }: LayoutProps) => {
               <h4 className="text-white font-semibold mb-4">Powered By</h4>
               <div className="p-3 bg-slate-800 rounded-lg">
                 <p className="text-sm font-medium text-emerald-400">Pre-Campus Computers</p>
-                <p className="text-xs text-slate-400 mt-1">& Quality Venture Home</p>
+                <p className="text-xs text-slate-400 mt-1">& Pre Campus College Schs Ltd</p>
                 <p className="text-xs text-slate-500 mt-2">Official Technology Partner</p>
               </div>
             </div>

@@ -20,15 +20,9 @@ export const SchoolQRCode = ({
   chapter, 
   showCard = true 
 }: SchoolQRCodeProps) => {
-  // QR code value - contains verification URL or just the ID
-  const qrValue = JSON.stringify({
-    schoolId,
-    name: schoolName,
-    proprietor: proprietorName,
-    state,
-    chapter,
-    verifyUrl: `https://napps-northcentral.com/verify?id=${schoolId}`
-  });
+  // QR code value - contains verification URL
+  const verifyUrl = `${window.location.origin}/verify?id=${schoolId}`;
+  const qrValue = verifyUrl;
 
   const handleDownload = () => {
     const svg = document.getElementById('school-qr-code') as SVGSVGElement;

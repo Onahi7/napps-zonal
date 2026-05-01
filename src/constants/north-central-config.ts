@@ -1,6 +1,6 @@
 /**
  * North Central Zone Configuration
- * Based on MOU between NAPPS North Central Zonal Executive Council and Pre-Campus Computers & Quality Venture Home
+ * Based on MOU between NAPPS North Central Zonal Executive Council, Pre Campus College Schs Ltd & Pre Campus College Computers
  * States: Benue, Kogi, Kwara, Niger, Nasarawa, Plateau & FCT
  */
 
@@ -43,7 +43,7 @@ export const NET_AMOUNT_TO_NAPPS = TOTAL_DUES - TOTAL_DEDUCTIONS; // ₦17,500
 // Payment Gateway
 export const PAYMENT_GATEWAY = {
   provider: 'Opay',
-  accountName: 'Pre-Campus Computers & Quality Venture Home',
+  accountName: 'Pre Campus College Computers',
   // Add Opay API credentials in .env
   apiKey: import.meta.env.VITE_OPAY_API_KEY || '',
   merchantId: import.meta.env.VITE_OPAY_MERCHANT_ID || ''

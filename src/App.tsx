@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Register from "./pages/Register";
+import PaymentFirstRegister from "./pages/PaymentFirstRegister";
 import Admin from "./pages/Admin";
 import PaymentStatus from "./pages/PaymentStatus";
 import NotFound from "./pages/NotFound";
@@ -18,6 +19,10 @@ import DuesPayment from "./pages/DuesPayment";
 import DuesPaymentVerify from "./pages/DuesPaymentVerify";
 import DuesPaymentDownload from "./pages/DuesPaymentDownload";
 import Executives from "./pages/Executives";
+import ZonalPresidentDashboard from "./pages/ZonalPresidentDashboard";
+import StateChairmanDashboard from "./pages/StateChairmanDashboard";
+import SchoolVerification from "./pages/SchoolVerification";
+import OfflineBackup from "./pages/OfflineBackup";
 
 const queryClient = new QueryClient();
 
@@ -29,7 +34,8 @@ const queryClient = new QueryClient();
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<PaymentFirstRegister />} />
+          <Route path="/old-register" element={<Register />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/proprietors/:id" element={<ProprietorDetailPage />} />
           <Route path="/payment/status" element={<PaymentStatus />} />
@@ -49,6 +55,10 @@ const queryClient = new QueryClient();
           <Route path="/dues-payment/verify" element={<DuesPaymentVerify />} />
           <Route path="/dues-payment/download" element={<DuesPaymentDownload />} />
           <Route path="/executives" element={<Executives />} />
+          <Route path="/zonal-president" element={<ZonalPresidentDashboard />} />
+          <Route path="/state-chairman" element={<StateChairmanDashboard />} />
+          <Route path="/verify" element={<SchoolVerification />} />
+          <Route path="/offline-backup" element={<OfflineBackup />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
