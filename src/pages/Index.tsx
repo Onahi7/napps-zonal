@@ -136,15 +136,8 @@ const Index = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
                   <div>
-                    <p className="font-semibold text-white">Local Dues</p>
-                    <p className="text-sm text-slate-400">Chapter-level operations</p>
-                  </div>
-                  <p className="text-xl font-bold text-emerald-400">ContactUs</p>
-                </div>
-                <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-                  <div>
                     <p className="font-semibold text-white">State Dues</p>
-                    <p className="text-sm text-slate-400">State chapter activities</p>
+                    <p className="text-sm text-slate-400">State operations</p>
                   </div>
                   <p className="text-xl font-bold text-emerald-400">ContactUs</p>
                 </div>
