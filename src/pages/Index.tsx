@@ -139,23 +139,36 @@ const Index = () => {
                     <p className="font-semibold text-white">State Dues</p>
                     <p className="text-sm text-slate-400">State operations</p>
                   </div>
-                  <p className="text-xl font-bold text-emerald-400">ContactUs</p>
+                  <p className="text-xl font-bold text-emerald-400">₦4,000</p>
                 </div>
                 <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
                   <div>
                     <p className="font-semibold text-white">Zonal Dues</p>
                     <p className="text-sm text-slate-400">Zone coordination</p>
                   </div>
-                  <p className="text-xl font-bold text-emerald-400">ContactUs</p>
+                  <p className="text-xl font-bold text-emerald-400">₦2,000</p>
+                </div>
+                <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                  <div>
+                    <p className="font-semibold text-white">National Dues</p>
+                    <p className="text-sm text-slate-400">National programs</p>
+                  </div>
+                  <p className="text-xl font-bold text-emerald-400">₦5,000</p>
+                </div>
+                <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                  <div>
+                    <p className="font-semibold text-white">NAPPS ID Card</p>
+                    <p className="text-sm text-slate-400">ID with QR code</p>
+                  </div>
+                  <p className="text-xl font-bold text-emerald-400">₦3,500</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-8">
               <div className="text-center mb-6">
-                <p className="text-sm text-emerald-300 font-medium">For Registration</p>
-                <p className="text-5xl font-bold text-white mt-2">Contact Field Team</p>
-                <p className="text-slate-400 mt-4">Speak with NAPPS representatives in your state for accurate dues information and registration.</p>
+                <p className="text-sm text-emerald-300 font-medium">Total Registration Fee</p>
+                <p className="text-5xl font-bold text-white mt-2">₦20,500</p>
               </div>
 
               <div className="space-y-4 border-t border-white/10 pt-6">
