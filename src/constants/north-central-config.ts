@@ -42,11 +42,11 @@ export const NET_AMOUNT_TO_NAPPS = TOTAL_DUES - TOTAL_DEDUCTIONS; // ₦17,500
 
 // Payment Gateway
 export const PAYMENT_GATEWAY = {
-  provider: 'Opay',
-  accountName: 'Pre Campus College Computers',
-  // Add Opay API credentials in .env
-  apiKey: import.meta.env.VITE_OPAY_API_KEY || '',
-  merchantId: import.meta.env.VITE_OPAY_MERCHANT_ID || ''
+  provider: 'Fidelity',
+  accountName: 'Pre Campus College',
+  // Add Fidelity API credentials in .env
+  apiKey: import.meta.env.VITE_FIDELITY_API_KEY || '',
+  merchantId: import.meta.env.VITE_FIDELITY_MERCHANT_ID || ''
 };
 
 // Sample chapters by state (needs to be populated with actual chapters)

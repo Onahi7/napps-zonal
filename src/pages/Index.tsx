@@ -193,9 +193,9 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
-              { name: "Prof. Emmanuel O. Adeleye", position: "Zonal President", state: "Nasarawa" },
-              { name: "Dr. Grace A. Kolo", position: "Vice President", state: "Plateau" },
-              { name: "Barr. Ibrahim Y. Katun", position: "Zonal Secretary", state: "Niger" },
+              { name: "Dr. Rahaman Adetunji Lateef", position: "Zonal President", state: "North Central" },
+              { name: "Hon. Boniface Iornumbe", position: "Vice President", state: "North Central" },
+              { name: "Harrison Eze", position: "Zonal Welfare", state: "North Central" },
             ].map(({ name, position, state }) => (
               <Card key={name} className="border-0 shadow-lg">
                 <CardContent className="p-6 text-center">
@@ -261,7 +261,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: CreditCard, title: 'Centralized Dues Payment', desc: 'Process all payments through Opay gateway with real-time confirmation' },
+              { icon: CreditCard, title: 'Centralized Dues Payment', desc: 'Process all payments through Fidelity gateway with real-time confirmation' },
               { icon: TrendingUp, title: 'Automated Fund Reconciliation', desc: 'Automatic allocation to National, Zonal, State, and Chapter levels' },
               { icon: Users, title: 'Real-time Dashboard', desc: 'Monitor payments, compliance, and member status instantly' },
               { icon: QrCode, title: 'Unique School ID System', desc: 'Every school gets a unique NC-XXXXXXXX identification code' },

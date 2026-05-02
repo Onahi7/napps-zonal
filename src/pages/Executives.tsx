@@ -6,12 +6,9 @@ import { Shield, Award, Users, Briefcase } from "lucide-react";
 
 const executives = {
   zonal: [
-    { name: "Prof. Emmanuel O. Adeleye", position: "Zonal President", phone: "+234-XXX-XXX-XXXX", state: "Nasarawa" },
-    { name: "Dr. Grace A. Kolo", position: "Vice President", phone: "+234-XXX-XXX-XXXX", state: "Plateau" },
-    { name: "Barr. Ibrahim Y. Katun", position: "Zonal Secretary", phone: "+234-XXX-XXX-XXXX", state: "Niger" },
-    { name: "Chief Mrs. Victoria U. Ocho", position: "Assistant Secretary", phone: "+234-XXX-XXX-XXXX", state: "Kwara" },
-    { name: "Alhaji Sani A. Abubakar", position: "Zonal Treasurer", phone: "+234-XXX-XXX-XXXX", state: "Kogi" },
-    { name: "Rev. Dr. Peter O. Owolabi", position: "Financial Secretary", phone: "+234-XXX-XXX-XXXX", state: "Benue" },
+    { name: "Dr. Rahaman Adetunji Lateef", position: "Zonal President", phone: "+234-XXX-XXX-XXXX", state: "North Central" },
+    { name: "Hon. Boniface Iornumbe", position: "Vice President", phone: "+234-XXX-XXX-XXXX", state: "North Central" },
+    { name: "Harrison Eze", position: "Zonal Welfare", phone: "+234-XXX-XXX-XXXX", state: "North Central" },
   ],
   national: [
     { name: "Chief (Dr.) Olufemi Olaleye", position: "National President", phone: "+234-XXX-XXX-XXXX", state: "Lagos" },
