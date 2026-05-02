@@ -193,18 +193,26 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
-              { name: "Dr. Rahaman Adetunji Lateef", position: "Zonal President", state: "North Central" },
-              { name: "Hon. Boniface Iornumbe", position: "Vice President", state: "North Central" },
-              { name: "Harrison Eze", position: "Zonal Welfare", state: "North Central" },
-            ].map(({ name, position, state }) => (
+              { name: "Dr. Rahaman Adetunji Lateef", position: "Zonal President", state: "North Central", image: "/president.jpg" },
+              { name: "Hon. Boniface Iornumbe", position: "Vice President", state: "North Central", image: "/vice-president.jpg" },
+              { name: "Harrison Eze", position: "Zonal Welfare", state: "North Central", image: "/zonal-welfare.jpg" },
+            ].map(({ name, position, state, image }) => (
               <Card key={name} className="border-0 shadow-lg">
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">
-                    {name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                  </div>
+                  {image ? (
+                    <img 
+                      src={image} 
+                      alt={name}
+                      className="w-16 h-16 rounded-full object-cover mx-auto mb-4"
+                    />
+                  ) : (
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">
+                      {name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                    </div>
+                  )}
                   <h3 className="font-bold text-slate-900">{name}</h3>
                   <p className="text-emerald-600 text-sm font-medium">{position}</p>
-                  <p className="text-slate-500 text-xs mt-1">{state} State</p>
+                  <p className="text-slate-500 text-xs mt-1">{state} Zone</p>
                 </CardContent>
               </Card>
             ))}

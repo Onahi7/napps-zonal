@@ -6,9 +6,9 @@ import { Shield, Award, Users, Briefcase } from "lucide-react";
 
 const executives = {
   zonal: [
-    { name: "Dr. Rahaman Adetunji Lateef", position: "Zonal President", phone: "+234-XXX-XXX-XXXX", state: "North Central" },
-    { name: "Hon. Boniface Iornumbe", position: "Vice President", phone: "+234-XXX-XXX-XXXX", state: "North Central" },
-    { name: "Harrison Eze", position: "Zonal Welfare", phone: "+234-XXX-XXX-XXXX", state: "North Central" },
+    { name: "Dr. Rahaman Adetunji Lateef", position: "Zonal President", phone: "+234-XXX-XXX-XXXX", state: "North Central", image: "/president.jpg" },
+    { name: "Hon. Boniface Iornumbe", position: "Vice President", phone: "+234-XXX-XXX-XXXX", state: "North Central", image: "/vice-president.jpg" },
+    { name: "Harrison Eze", position: "Zonal Welfare", phone: "+234-XXX-XXX-XXXX", state: "North Central", image: "/zonal-welfare.jpg" },
   ],
   national: [
     { name: "Chief (Dr.) Olufemi Olaleye", position: "National President", phone: "+234-XXX-XXX-XXXX", state: "Lagos" },
@@ -59,9 +59,17 @@ export default function Executives() {
                 <Card key={idx} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-xl font-bold flex-shrink-0">
-                        {exec.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                      </div>
+                      {exec.image ? (
+                        <img 
+                          src={exec.image} 
+                          alt={exec.name}
+                          className="w-14 h-14 rounded-full object-cover flex-shrink-0"
+                        />
+                      ) : (
+                        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-xl font-bold flex-shrink-0">
+                          {exec.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                        </div>
+                      )}
                       <div className="flex-1">
                         <h3 className="font-bold text-slate-900">{exec.name}</h3>
                         <Badge className="mt-1 bg-emerald-100 text-emerald-700 text-xs">
@@ -69,7 +77,7 @@ export default function Executives() {
                         </Badge>
                         <p className="text-sm text-slate-500 mt-2 flex items-center gap-1">
                           <Users className="w-3 h-3" />
-                          {exec.state} State
+                          {exec.state} Zone
                         </p>
                         <p className="text-sm text-slate-600 mt-1">{exec.phone}</p>
                       </div>
