@@ -15,9 +15,15 @@ export const Layout = ({ children }: LayoutProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Navigation - only Home and Executives visible to public
+  // Register, Pay Dues, Login, Offline Backup are internal field team tools
   const navItems = [
     { to: '/', label: 'Home', icon: Home },
     { to: '/executives', label: 'Executives', icon: Users },
+  ];
+
+  // Field team quick access links (hidden from public nav)
+  const fieldTeamLinks = [
     { to: '/register', label: 'Register', icon: UserPlus },
     { to: '/dues-payment', label: 'Pay Dues', icon: CreditCard },
     { to: '/proprietor-login', label: 'Login', icon: LogIn },
@@ -150,9 +156,7 @@ export const Layout = ({ children }: LayoutProps) => {
               <ul className="space-y-2 text-sm">
                 <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li><Link to="/executives" className="hover:text-white transition-colors">Executives</Link></li>
-                <li><Link to="/register" className="hover:text-white transition-colors">Register School</Link></li>
-                <li><Link to="/dues-payment" className="hover:text-white transition-colors">Pay Dues</Link></li>
-                <li><Link to="/proprietor-login" className="hover:text-white transition-colors">Login</Link></li>
+                <li><Link to="/verify" className="hover:text-white transition-colors">Verify School ID</Link></li>
               </ul>
             </div>
 

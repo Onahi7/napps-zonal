@@ -85,22 +85,22 @@ const Index = () => {
               {
                 step: 1,
                 icon: Users,
-                title: 'Register',
-                desc: 'Fill your personal and school details in our simple online form',
+                title: 'Visit Schools',
+                desc: 'NAPPS field team visits private schools across all 7 states',
                 color: 'emerald',
               },
               {
                 step: 2,
                 icon: CreditCard,
-                title: 'Pay Dues',
-                desc: 'Make a one-time payment of ₦20,500 covering all NAPPS dues and ID card',
+                title: 'Collect Dues',
+                desc: 'Field team collects membership dues on-site',
                 color: 'blue',
               },
               {
                 step: 3,
                 icon: QrCode,
-                title: 'Get Your ID',
-                desc: 'Receive your unique School ID with QR code for verification',
+                title: 'Issue ID',
+                desc: 'Schools receive official NAPPS ID with QR verification',
                 color: 'violet',
               },
             ].map(({ step, icon: Icon, title, desc, color }) => (
@@ -120,65 +120,67 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Dues Breakdown */}
+      {/* Dues Info */}
       <section className="py-16 bg-gradient-to-br from-slate-900 to-emerald-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Transparent Dues Structure
+                Membership Dues
               </h2>
               <p className="text-lg text-slate-300 mb-8">
-                One-time payment of ₦20,500 covering all levels of NAPPS membership. 
-                No hidden charges, no recurring fees.
+                One-time registration covering all levels of NAPPS membership. 
+                Contact the zonal secretariat for current dues structure.
               </p>
 
               <div className="space-y-4">
-                {[
-                  { label: 'Local Dues', amount: '₦6,000', desc: 'Chapter-level operations' },
-                  { label: 'State Dues', amount: '₦4,000', desc: 'State chapter activities' },
-                  { label: 'Zonal Dues', amount: '₦2,000', desc: 'Zone coordination' },
-                  { label: 'National Dues', amount: '₦5,000', desc: 'National programs' },
-                  { label: 'NAPPS ID Card', amount: '₦3,500', desc: 'Your official ID with QR code' },
-                ].map(({ label, amount, desc }) => (
-                  <div key={label} className="flex items-center justify-between p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-                    <div>
-                      <p className="font-semibold text-white">{label}</p>
-                      <p className="text-sm text-slate-400">{desc}</p>
-                    </div>
-                    <p className="text-xl font-bold text-emerald-400">{amount}</p>
+                <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                  <div>
+                    <p className="font-semibold text-white">Local Dues</p>
+                    <p className="text-sm text-slate-400">Chapter-level operations</p>
                   </div>
-                ))}
+                  <p className="text-xl font-bold text-emerald-400">ContactUs</p>
+                </div>
+                <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                  <div>
+                    <p className="font-semibold text-white">State Dues</p>
+                    <p className="text-sm text-slate-400">State chapter activities</p>
+                  </div>
+                  <p className="text-xl font-bold text-emerald-400">ContactUs</p>
+                </div>
+                <div className="flex items-center justify-between p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                  <div>
+                    <p className="font-semibold text-white">Zonal Dues</p>
+                    <p className="text-sm text-slate-400">Zone coordination</p>
+                  </div>
+                  <p className="text-xl font-bold text-emerald-400">ContactUs</p>
+                </div>
               </div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-8">
               <div className="text-center mb-6">
-                <p className="text-sm text-emerald-300 font-medium">Total Amount Payable</p>
-                <p className="text-5xl font-bold text-white mt-2">₦20,500</p>
+                <p className="text-sm text-emerald-300 font-medium">For Registration</p>
+                <p className="text-5xl font-bold text-white mt-2">Contact Field Team</p>
+                <p className="text-slate-400 mt-4">Speak with NAPPS representatives in your state for accurate dues information and registration.</p>
               </div>
 
               <div className="space-y-4 border-t border-white/10 pt-6">
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-400">Operational Deductions</span>
-                  <span className="text-red-400">-₦3,000</span>
+                  <span className="text-slate-400">NAPPS ID Card</span>
+                  <span className="text-emerald-400">Included</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-400">Gateway Charges</span>
-                  <span className="text-slate-400">Included</span>
-                </div>
-                <div className="flex justify-between font-semibold pt-4 border-t border-white/10">
-                  <span>Net to NAPPS</span>
-                  <span className="text-emerald-400">₦17,500</span>
+                  <span className="text-slate-400">QR Code Verification</span>
+                  <span className="text-emerald-400">Standard</span>
                 </div>
               </div>
 
-              <Link to="/dues-payment" className="mt-6 block">
-                <Button className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold">
-                  Pay Dues Now
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </Link>
+              <div className="mt-6 pt-6 border-t border-white/10 text-center">
+                <p className="text-sm text-slate-400">
+                  Field teams visit schools in each state to collect dues and register members.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -231,29 +233,21 @@ const Index = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 mb-6">
             <Star className="w-4 h-4 text-amber-400" />
-            <span className="text-sm font-medium text-white">Join thousands of school proprietors</span>
+            <span className="text-sm font-medium text-white">Serving private schools across 7 states</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
+            About NAPPS North Central Zone
           </h2>
           <p className="text-lg text-emerald-100 mb-8 max-w-2xl mx-auto">
-            Register your school today and become part of the largest association of private schools
-            in Nigeria's North Central Zone.
+            The National Association of Proprietors of Private Schools (NAPPS) North Central Zone 
+            represents and supports private educational institutions across Benue, Kogi, Kwara, Niger, 
+            Nasarawa, Plateau, and the FCT.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/register">
+            <Link to="/executives">
               <Button size="lg" className="w-full sm:w-auto bg-white text-emerald-700 hover:bg-emerald-50 font-semibold shadow-lg">
                 <Users className="w-5 h-5 mr-2" />
-                Register School
-              </Button>
-            </Link>
-            <Link to="/proprietor-login">
-              <Button
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white/10 font-semibold"
-              >
-                Already Registered? Login
+                Meet Our Executives
               </Button>
             </Link>
           </div>
