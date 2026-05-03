@@ -188,24 +188,6 @@ const Index = () => {
                 </p>
               </div>
             </div>
-
-              <div className="space-y-4 border-t border-white/10 pt-6">
-                <div className="flex justify-between text-sm">
-                  <span className="text-slate-400">NAPPS ID Card</span>
-                  <span className="text-emerald-400">Included</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-slate-400">QR Code Verification</span>
-                  <span className="text-emerald-400">Standard</span>
-                </div>
-              </div>
-
-              <div className="mt-6 pt-6 border-t border-white/10 text-center">
-                <p className="text-sm text-slate-400">
-                  NAPPS consultant teams visit schools at chapter level in each state.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
