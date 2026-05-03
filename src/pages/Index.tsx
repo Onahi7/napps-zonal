@@ -85,22 +85,22 @@ const Index = () => {
               {
                 step: 1,
                 icon: Users,
-                title: 'Visit Schools',
-                desc: 'NAPPS field team visits private schools across all 7 states',
+                title: 'Chapter Visits',
+                desc: 'NAPPS consultants visit schools grouped at chapter level in each state',
                 color: 'emerald',
               },
               {
                 step: 2,
                 icon: CreditCard,
                 title: 'Collect Dues',
-                desc: 'Field team collects membership dues on-site',
+                desc: 'Consultants collect membership dues on-site during chapter visits',
                 color: 'blue',
               },
               {
                 step: 3,
                 icon: QrCode,
                 title: 'Issue ID',
-                desc: 'Schools receive official NAPPS ID with QR verification',
+                desc: 'Schools receive official NAPPS ID card with QR verification',
                 color: 'violet',
               },
             ].map(({ step, icon: Icon, title, desc, color }) => (
@@ -170,6 +170,24 @@ const Index = () => {
                 <p className="text-sm text-emerald-300 font-medium">Total Registration Fee</p>
                 <p className="text-5xl font-bold text-white mt-2">₦20,500</p>
               </div>
+
+              <div className="space-y-4 border-t border-white/10 pt-6">
+                <div className="flex justify-between text-sm">
+                  <span className="text-slate-400">NAPPS ID Card</span>
+                  <span className="text-emerald-400">Included</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-slate-400">QR Code Verification</span>
+                  <span className="text-emerald-400">Standard</span>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-white/10 text-center">
+                <p className="text-sm text-slate-400">
+                  NAPPS consultant teams visit schools at chapter level. Contact your chapter representative for registration.
+                </p>
+              </div>
+            </div>
 
               <div className="space-y-4 border-t border-white/10 pt-6">
                 <div className="flex justify-between text-sm">
