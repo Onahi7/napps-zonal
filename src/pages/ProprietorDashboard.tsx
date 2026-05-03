@@ -125,7 +125,7 @@ export default function ProprietorDashboard() {
                       <CreditCard className="w-6 h-6" />
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-slate-900">₦20,500</p>
+                      <p className="text-2xl font-bold text-slate-900">₦14,500</p>
                       <p className="text-sm text-slate-500">Total Paid</p>
                     </div>
                   </CardContent>
@@ -268,7 +268,7 @@ export default function ProprietorDashboard() {
                           <td className="px-6 py-4 text-sm text-slate-600">{schoolData.registrationDate}</td>
                           <td className="px-6 py-4 font-mono text-sm text-slate-600">NAPPS-{Date.now().toString(36).toUpperCase()}</td>
                           <td className="px-6 py-4 text-sm text-slate-600">Annual Dues (2026)</td>
-                          <td className="px-6 py-4 font-medium text-slate-900">₦20,500</td>
+                          <td className="px-6 py-4 font-medium text-slate-900">₦14,500</td>
                           <td className="px-6 py-4">
                             <Badge className="bg-emerald-100 text-emerald-700">Paid</Badge>
                           </td>

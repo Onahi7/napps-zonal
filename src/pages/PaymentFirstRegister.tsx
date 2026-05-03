@@ -364,7 +364,6 @@ export default function PaymentFirstRegister() {
                   <div className="bg-slate-50 p-4 rounded-lg space-y-2">
                     <h4 className="font-medium">Payment Breakdown:</h4>
                     <div className="text-sm space-y-1">
-                      <div className="flex justify-between"><span>Local Dues:</span><span>₦6,000</span></div>
                       <div className="flex justify-between"><span>State Dues:</span><span>₦4,000</span></div>
                       <div className="flex justify-between"><span>Zonal Dues:</span><span>₦2,000</span></div>
                       <div className="flex justify-between"><span>National Dues:</span><span>₦5,000</span></div>

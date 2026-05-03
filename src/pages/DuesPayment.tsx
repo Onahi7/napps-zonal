@@ -56,7 +56,7 @@ export default function DuesPayment() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-500">Amount</span>
-                  <span className="font-bold text-slate-900">₦20,500</span>
+                  <span className="font-bold text-slate-900">₦14,500</span>
                 </div>
               </div>
 
@@ -191,7 +191,7 @@ export default function DuesPayment() {
                           </>
                         ) : (
                           <>
-                            Pay ₦20,500
+                            Pay ₦14,500
                           </>
                         )}
                       </Button>
@@ -210,7 +210,6 @@ export default function DuesPayment() {
                 <CardContent className="p-6 space-y-4">
                   <div className="space-y-3">
                     {[
-                      { label: 'Local Dues', amount: '₦6,000' },
                       { label: 'State Dues', amount: '₦4,000' },
                       { label: 'Zonal Dues', amount: '₦2,000' },
                       { label: 'National Dues', amount: '₦5,000' },
@@ -226,7 +225,7 @@ export default function DuesPayment() {
                   <div className="border-t border-slate-200 pt-4">
                     <div className="flex justify-between">
                       <span className="font-semibold text-slate-900">Total</span>
-                      <span className="text-2xl font-bold text-emerald-600">₦20,500</span>
+                      <span className="text-2xl font-bold text-emerald-600">₦14,500</span>
                     </div>
                   </div>
 

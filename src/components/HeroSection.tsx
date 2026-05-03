@@ -86,13 +86,12 @@ export const HeroSection = () => {
               <CardContent className="p-8 space-y-6">
                 <div className="text-center">
                   <p className="text-sm text-emerald-300 font-medium mb-2">Total Dues Payable</p>
-                  <p className="text-5xl font-bold text-white">₦20,500</p>
+                  <p className="text-5xl font-bold text-white">₦14,500</p>
                   <p className="text-sm text-slate-400 mt-1">One-time payment</p>
                 </div>
                 
                 <div className="space-y-3 border-t border-white/10 pt-6">
                   {[
-                    { label: 'Local Dues', amount: '₦6,000' },
                     { label: 'State Dues', amount: '₦4,000' },
                     { label: 'Zonal Dues', amount: '₦2,000' },
                     { label: 'National Dues', amount: '₦5,000' },

@@ -286,7 +286,6 @@ export default function ZonalPresidentDashboard() {
                 <CardContent>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {[
-                      { label: 'Local Dues', amount: zonalSummary.local_dues },
                       { label: 'State Dues', amount: zonalSummary.state_dues },
                       { label: 'Zonal Dues', amount: zonalSummary.zonal_dues },
                       { label: 'National Dues', amount: zonalSummary.national_dues },

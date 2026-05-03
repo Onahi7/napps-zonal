@@ -33,10 +33,6 @@ export function Step3PaymentInfo({ onSubmit, onBack, isSubmitting }: Step3Paymen
       <Card className="border-slate-200">
         <CardContent className="p-4 space-y-3">
           <div className="flex justify-between text-sm">
-            <span className="text-slate-600">Local Dues</span>
-            <span className="font-medium text-slate-900">₦6,000</span>
-          </div>
-          <div className="flex justify-between text-sm">
             <span className="text-slate-600">State Dues</span>
             <span className="font-medium text-slate-900">₦4,000</span>
           </div>
@@ -55,7 +51,7 @@ export function Step3PaymentInfo({ onSubmit, onBack, isSubmitting }: Step3Paymen
           <div className="border-t border-slate-200 pt-3 mt-3">
             <div className="flex justify-between">
               <span className="font-semibold text-slate-900">Total Amount</span>
-              <span className="text-2xl font-bold text-emerald-600">₦20,500</span>
+              <span className="text-2xl font-bold text-emerald-600">₦14,500</span>
             </div>
           </div>
         </CardContent>
@@ -121,7 +117,7 @@ export function Step3PaymentInfo({ onSubmit, onBack, isSubmitting }: Step3Paymen
             </>
           ) : (
             <>
-              Pay ₦20,500
+              Pay ₦14,500
               <CreditCard className="w-5 h-5 ml-2" />
             </>
           )}

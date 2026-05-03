@@ -17,16 +17,16 @@ export const NORTH_CENTRAL_STATES = [
 
 export type NorthCentralState = typeof NORTH_CENTRAL_STATES[number];
 
-// Dues Structure (Total: ₦20,500)
+// Dues Structure (Total: ₦14,500)
 export const DUES_STRUCTURE = {
-  local: 6000,      // Local Dues
+  local: 0,         // Chapter/Local dues removed
   state: 4000,      // State Dues
   zonal: 2000,      // Zonal Dues
   national: 5000,   // National Dues
   idCard: 3500      // NAPPS ID Card
 };
 
-export const TOTAL_DUES = Object.values(DUES_STRUCTURE).reduce((a, b) => a + b, 0); // ₦20,500
+export const TOTAL_DUES = Object.values(DUES_STRUCTURE).reduce((a, b) => a + b, 0); // ₦14,500
 
 // Operational Deductions (Total: ₦3,000)
 export const OPERATIONAL_DEDUCTIONS = {
