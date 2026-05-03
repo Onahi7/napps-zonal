@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { 
-  MapPin, Users, CreditCard, Shield, ChevronRight, 
-  CheckCircle2, Star, ArrowRight
+  MapPin, Users, Shield, CheckCircle2, Star
 } from 'lucide-react';
 import { NORTH_CENTRAL_STATES } from '@/constants/north-central-config';
 
@@ -39,30 +38,6 @@ export const HeroSection = () => {
                 The official portal for private school proprietors across 7 states. 
                 Pay dues, get your School ID, and join the largest association of private schools in Nigeria.
               </p>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link to="/register">
-                <Button 
-                  size="lg" 
-                  className="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 shadow-xl text-white font-semibold px-8"
-                >
-                  <Users className="w-5 h-5 mr-2" />
-                  Register Now
-                  <ChevronRight className="w-4 h-4 ml-2" />
-                </Button>
-              </Link>
-              <Link to="/dues-payment">
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-semibold px-8"
-                >
-                  <CreditCard className="w-5 h-5 mr-2" />
-                  Pay Dues
-                </Button>
-              </Link>
             </div>
 
             {/* Trust Indicators */}
@@ -104,14 +79,6 @@ export const HeroSection = () => {
                   ))}
                 </div>
 
-                <div className="pt-4 border-t border-white/10">
-                  <Link to="/dues-payment">
-                    <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold">
-                      Pay Dues Now
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
-                </div>
               </CardContent>
             </Card>
           </div>
