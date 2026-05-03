@@ -16,7 +16,7 @@ export const Layout = ({ children }: LayoutProps) => {
   const location = useLocation();
 
   // Navigation - only Home and Executives visible to public
-  // Register, Pay Dues, Login, Offline Backup are internal field team tools
+  // Register, Pay Dues, Login, Offline Backup are internal consultant tools
   const navItems = [
     { to: '/', label: 'Home', icon: Home },
     { to: '/executives', label: 'Executives', icon: Users },

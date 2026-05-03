@@ -202,7 +202,7 @@ const Index = () => {
 
               <div className="mt-6 pt-6 border-t border-white/10 text-center">
                 <p className="text-sm text-slate-400">
-                  Field teams visit schools in each state to collect dues and register members.
+                  NAPPS consultant teams visit schools at chapter level in each state.
                 </p>
               </div>
             </div>
