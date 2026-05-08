@@ -208,7 +208,7 @@ const Index = () => {
             {[
               { name: "Dr. Rahaman Adetunji Lateef", position: "Zonal President", state: "North Central", image: "/president.jpg" },
               { name: "Hon. Boniface Iornumbe", position: "Vice President", state: "North Central", image: "/vice-president.jpg" },
-              { name: "Harrison Eze", position: "Zonal Welfare", state: "North Central", image: "/zonal-welfare.jpg" },
+              { name: "Deacon Femi Isaac Alalade", position: "Zonal Secretary", state: "North Central", image: "/zonal-secretary.jpg" },
             ].map(({ name, position, state, image }) => (
               <Card key={name} className="border-0 shadow-lg">
                 <CardContent className="p-6 text-center">
