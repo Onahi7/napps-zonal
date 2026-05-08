@@ -9,6 +9,7 @@ const executives = {
     { name: "Dr. Rahaman Adetunji Lateef", position: "Zonal President", phone: "+234-XXX-XXX-XXXX", state: "North Central", image: "/president.jpg" },
     { name: "Hon. Boniface Iornumbe", position: "Vice President", phone: "+234-XXX-XXX-XXXX", state: "North Central", image: "/vice-president.jpg" },
     { name: "Deacon Femi Isaac Alalade", position: "Zonal Secretary", phone: "+234-XXX-XXX-XXXX", state: "North Central", image: "/zonal-secretary.jpg" },
+    { name: "Harrison Eze", position: "Zonal Welfare", phone: "+234-XXX-XXX-XXXX", state: "North Central", image: "/zonal-welfare.jpg" },
   ],
   national: [
     { name: "Chief (Dr.) Olufemi Olaleye", position: "National President", phone: "+234-XXX-XXX-XXXX", state: "Lagos" },
@@ -63,7 +64,7 @@ export default function Executives() {
                         <img 
                           src={exec.image} 
                           alt={exec.name}
-                          className="w-14 h-14 rounded-full object-cover flex-shrink-0"
+                          className="w-24 h-24 rounded-full object-cover flex-shrink-0"
                         />
                       ) : (
                         <div className="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-xl font-bold flex-shrink-0">
