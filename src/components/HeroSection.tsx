@@ -40,6 +40,25 @@ export const HeroSection = () => {
               </p>
             </div>
 
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+              <a href="#lookup">
+                <Button size="lg" className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold shadow-lg">
+                  Find School Record
+                </Button>
+              </a>
+              <Link to="/register">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border-white/20 text-white font-semibold">
+                  New School Registration
+                </Button>
+              </Link>
+              <Link to="/proprietor-login">
+                <Button size="lg" variant="ghost" className="w-full sm:w-auto text-emerald-300 hover:bg-white/10 hover:text-white">
+                  Proprietor Login →
+                </Button>
+              </Link>
+            </div>
+
             {/* Trust Indicators */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-4">
               {[

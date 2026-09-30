@@ -34,7 +34,8 @@ const queryClient = new QueryClient();
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/register" element={<PaymentFirstRegister />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/payment-first" element={<PaymentFirstRegister />} />
           <Route path="/old-register" element={<Register />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/proprietors/:id" element={<ProprietorDetailPage />} />

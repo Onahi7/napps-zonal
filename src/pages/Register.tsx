@@ -124,6 +124,13 @@ export default function Register() {
             </div>
             <h1 className="text-3xl font-bold text-slate-900">Register Your School</h1>
             <p className="text-slate-600 mt-2">Complete all steps to get your NAPPS School ID</p>
+
+            <div className="mt-4 inline-flex items-center gap-2 p-1.5 px-3 rounded-full bg-slate-100 border border-slate-200 text-xs">
+              <span className="text-slate-600">Already visited by a NAPPS consultant?</span>
+              <a href="/payment-first" className="text-emerald-700 font-bold hover:underline">
+                Redeem Payment Token →
+              </a>
+            </div>
           </div>
 
           {/* Resume Alert */}

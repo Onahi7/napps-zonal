@@ -9,11 +9,13 @@ import {
   FileText, Download, Building2, TrendingUp, Lock, Smartphone
 } from 'lucide-react';
 import { NORTH_CENTRAL_STATES, DUES_STRUCTURE } from '@/constants/north-central-config';
+import { RecordLookup } from "@/components/RecordLookup";
 
 const Index = () => {
   return (
     <Layout>
       <HeroSection />
+      <RecordLookup />
 
       {/* Stats Section */}
       <section className="py-16 bg-white">
