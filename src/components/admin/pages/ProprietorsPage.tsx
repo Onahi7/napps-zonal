@@ -64,7 +64,7 @@ export function ProprietorsPage({ authToken }: ProprietorsPageProps) {
       }
 
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/proprietors`, {
+        const response = await fetch(`${'https://napps-backend.dicksonhardy7.workers.dev/api/v1'}/proprietors`, {
           headers: {
             'Authorization': `Bearer ${authToken}`,
           },

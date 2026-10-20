@@ -523,7 +523,7 @@ Net to NAPPS: ₦17,500 per school
 
 ## API Endpoints (If using custom backend)
 
-Base URL: `https://api.nappsnasarawa.com/api/v1`
+Base URL: `https://napps-backend.dicksonhardy7.workers.dev/api/v1`
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
